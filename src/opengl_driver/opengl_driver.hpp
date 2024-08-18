@@ -13,12 +13,13 @@ class OpenGLDriver {
     GLuint g_vbo;
     GLuint g_vao;
 
-   public:
-    bool InitGL();
     static bool GetShaderCode(const char* shader_file_path,
                               std::string* shader_source);
     static void DebugShaderLog(GLuint shader);
     static void DebugProgramLog(GLuint program);
+
+   public:
+    bool InitGL();
     void Render();
 };
 
