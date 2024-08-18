@@ -5,7 +5,6 @@
 #include <fstream>
 #include <iostream>
 #include <memory>
-#include <stdexcept>
 
 class OpenGLDriver {
    private:
