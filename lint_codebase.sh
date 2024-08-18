@@ -1,2 +1,4 @@
 #!/bin/sh
-clang-tidy --format-style=file ../src/main.cpp ../src/pch/wattana-pch.hpp
+cpp_files=$(find ../src/ -name "*cpp")
+hpp_files=$(find ../src/ -name "*hpp")
+clang-tidy --format-style=file $cpp_files $hpp_files
