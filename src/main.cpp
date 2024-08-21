@@ -12,8 +12,8 @@ constexpr unsigned int LEVEL_WIDTH = 750;
 constexpr unsigned int LEVEL_HEIGHT = 500;
 
 int main() {
-    const std::string player_image_file_path = "assets/art/player.png";
-    const std::string music_file_path = "assets/music/hollow.ogg";
+    const std::string music_file_path = "assets/music/emergency.ogg";
+    const int volume = 50;
 
     sf::ContextSettings settings;
     settings.depthBits = 24;
@@ -55,28 +55,19 @@ int main() {
     // Activate the window
     window.setActive(true);
 
-    // window.setFramerateLimit(60);
+    // Set framerate to 60 frames per second
+    window.setFramerateLimit(60);
 
-    // player
-    /*sf::RectangleShape player(sf::Vector2f(player_width, player_height));
-
-    sf::Texture player_texture;
-    if (!player_texture.loadFromFile(player_image_file_path)) {
-        return -1;
-    }
-
-    player.setTexture(&player_texture);
-
+    // Set and play music
     sf::Music music;
     if (!music.openFromFile(music_file_path)) {
         return -1;
     }
 
-    const int volume = 50;
     music.setVolume(volume);
 
     music.setLoop(true);
-    music.play();*/
+    music.play();
 
     GLsizei viewport_width = 0;
     GLsizei viewport_height = 0;
